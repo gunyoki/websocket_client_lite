@@ -9,3 +9,16 @@
 
 # rspec failure tracking
 .rspec_status
+
+# OS artifacts
+.DS_Store
+Thumbs.db
+
+# Editor artifacts
+*.swp
+*.swo
+*.swn
+tags
+
+# IDE files
+/.idea/
