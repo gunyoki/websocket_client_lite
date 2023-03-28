@@ -10,13 +10,13 @@ Gem::Specification.new do |spec|
 
   spec.summary = "Easy to use WebSocket client"
   spec.description = "It works as a WebSocket client by simply implementing a block that handles messages."
-  spec.homepage = "https://rubygems.org/gems/websocket_client_lite"
+  spec.homepage = "https://github.com/gunyoki/websocket_client_lite"
   spec.license = "MIT"
   spec.required_ruby_version = ">= 2.6.0"
 
   spec.metadata["homepage_uri"] = spec.homepage
   spec.metadata["source_code_uri"] = "https://github.com/gunyoki/websocket_client_lite"
-  spec.metadata["changelog_uri"] = "https://github.com/gunyoki/websocket_client_lite/CHANGELOG.md"
+  spec.metadata["changelog_uri"] = "https://github.com/gunyoki/websocket_client_lite/blob/main/CHANGELOG.md"
 
   # Specify which files should be added to the gem when it is released.
   # The `git ls-files -z` loads the files in the RubyGem that have been added into git.
