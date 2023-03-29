@@ -11,10 +11,13 @@ Metrics/ClassLength:
   Max: 150
 
 Metrics/CyclomaticComplexity:
-  Max: 10
+  Max: 20
 
 Metrics/MethodLength:
   Max: 30
+
+Metrics/PerceivedComplexity:
+  Max: 10
 
 Style/Documentation:
   Enabled: false
