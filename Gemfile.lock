@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    websocket_client_lite (0.1.1)
+    websocket_client_lite (0.1.2)
       websocket
 
 GEM
