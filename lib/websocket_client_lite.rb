@@ -44,8 +44,10 @@ class WebsocketClientLite
 
     thread = start_incoming_thread
 
-    while %i[open closing_by_client].include?(@state) do
+    while %i[open closing_by_client].include?(@state)
       frame = @incoming_queue.pop
+      break unless frame
+
       case frame.type
       when :ping
         send_pong(frame.data)
@@ -100,6 +102,7 @@ class WebsocketClientLite
   private
 
   def make_socket(host, port, secure)
+    port ||= secure ? 443 : 80
     socket = Socket.tcp(host, port)
     socket.setsockopt(Socket::SOL_SOCKET, Socket::SO_KEEPALIVE, true)
     if secure
@@ -124,6 +127,7 @@ class WebsocketClientLite
       end
     rescue StandardError => e
       logger.error("[ws incoming] #{e.inspect}")
+      incoming_queue.close
     end
   end
 
